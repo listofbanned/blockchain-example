@@ -32,7 +32,6 @@ pub struct Block {
     pub previous_hash: String,
 }
 
-
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Nodes {
     pub address: Vec<String>,
@@ -50,7 +49,6 @@ struct ChainResponse {
     length: i64,
     chain: Vec<Block>,
 }
-
 
 impl Blockchain {
     pub fn new() -> Blockchain {
@@ -173,7 +171,6 @@ impl Blockchain {
     }
 }
 
-
 fn get_content(url: &str) -> hyper::Result<String> {
     let client = Client::new();
     let mut response = client.get(url).send()?;
@@ -181,7 +178,6 @@ fn get_content(url: &str) -> hyper::Result<String> {
     response.read_to_string(&mut buf)?;
     Ok(buf)
 }
-
 
 #[test]
 fn it_works() {

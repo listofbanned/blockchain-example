@@ -17,7 +17,6 @@ use std::sync::Mutex;
 use rocket_contrib::{Json, Value};
 use blockchain::*;
 
-
 lazy_static! {
     static ref GLOBAL_BLOCKCHAIN: Mutex<Blockchain> = Mutex::new(Blockchain::new());
 }
